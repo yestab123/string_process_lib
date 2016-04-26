@@ -79,9 +79,9 @@ main(int argc, char **argv) {
     p = change_escape(buff, size, &nsize);
     if (p != NULL) {
         printf("%s\n", p);
+        free(p);
     }
-
-    free(p);
     close(input);
 
+    return 0;
 }
